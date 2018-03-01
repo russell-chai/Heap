@@ -5,6 +5,26 @@
 
 using namespace std;
 
+int sort(int heap[128]) {
+  int changed = 0;
+  for (int a = size / 2; a > 0; a--) {
+    int left = heap[a * 2]
+    int right = heap[a * 2 + 1];
+    if (heap[a] < left || heap[a] < right) {
+      changed++;
+      if (left > right) {
+	heap[a * 2] = heap[a];
+	heap[a] = left;
+      }
+      else {
+        heap[a * 2 + 1] = heap[a];
+	heap[a] = right;
+      }
+    }
+  }
+  return changed;
+}
+
 void print(int heap[128], int index, int tabs) {
   if (index * 2 < 128 && heap[index * 2] == 0 && index * 2 + 1 < 128 && heap[index * 2 + 1] == 0) {
     int temp = tabs;
