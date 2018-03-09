@@ -87,7 +87,7 @@ int main() {
     fin.ignore();
     size++;
     int index = 1;
-    while (!fin.eof()) {
+    while (!fin.eof()) { //kermit
       heap[index] = number;
       fin >> number;
       fin.ignore();
