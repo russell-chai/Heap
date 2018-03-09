@@ -87,13 +87,14 @@ int main() {
     fin.ignore();
     size++;
     int index = 1;
-    while (!fin.eof()) { //kermit
+    while (!fin.eof()) {
       heap[index] = number;
       fin >> number;
       fin.ignore();
       size++;
       index++;
     }
+    heap[index] = number;
   }
   //getting input from typing
   else {
